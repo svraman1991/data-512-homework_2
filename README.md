@@ -85,11 +85,14 @@ Bias in participation need not imply bias in quality and for a site such as Wiki
 Apart from the above, here are some responses to a set of questions on this data and analysis:
 
 1) What biases did you expect to find in the data (before you started working with it), and why?
+
    a) As mentioned above, I expected big cities and tech hubs to have a higher proportion of good quality articles as opposed to more interior cities. This was based on the assumption that more people are technologically inclined at such places and would take greater efforts to add details to the place they are a domicile of. However, that has not really been the case and the efforts of the committed few often outweigh the headaches associated with moderating and ascertaining the sources from a myriad of accounts
 
 2) What might your results suggest about (English) Wikipedia as a data source?
+
   a) In spite of the biases and vagaries of the API calls and results, I believe that Wikipedia is a very valid source for initial analysis and as square one to start one's research. With the increasing trend of companies locking up their data from API access, Wiki might well be one of the last bastions of publicly available and near-verified data sources. Analysis is in the hands of the data scientist. One could run with "results" that enforce their bias or preconceived notions or use the data to report findings. In that sense, Wiki is still a great source to obtain data from and reach high level analysis goals. Another point to be noted is the completeness of data, for instance, the state list in my input did not have details for the states of Nebraska and Connecticut, hence it is vital to be cognizant of the limitations of these results especially at a division or region level. 
 
 3) How might a researcher supplement or transform this dataset to potentially correct for the limitations/biases you observed?
+
   a) Be it Wikipedia or other sources, unless there is a universally accepted single source of truth, it would be detrimental to rely on one source. This can be accounted for by going through the articles that are used to create the content for this site. Similarly, using government data sources and renowned news publication would add not just dimensions but a more unbiased source to the research. If more time were devoted to data requisition (provenance) over training models, that is to say, if we trained ourselves to learn the data before running it through machine learning, not only will our results be rich, but we can avoid controversies and human errors. After all, stats without context is not much different from a grand lie with a kernel of truth to it.
 
