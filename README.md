@@ -1,11 +1,12 @@
-# Data512_UW_RS
-
-Ramans repository for Data 512 Assignments - Au23 - Assignment 2
+# Ramans repository for Data 512 Assignments - Au23 - Assignment 2
 
 ## Goal:
   a) Understand data retrieval from Wiki pages and use the data to predict article quality
+
   b) Apply ORES machine learning model to get the article quality for Wikipedia pages
+
   c) Understand the biases and inferences from the number of articles and article quality at a state level (for US states) and per capita level
+
   d) Understand reproducibility and methods to use pre existing code or packages to create ones' own work
 
 ## Licenses:
@@ -26,29 +27,21 @@ These files are present in the "Input Files" folder of this repo and it contains
 2) US States by Region - US Census Bureau.xlsx - the division and region information for the states
 3) NST-EST2022-POP.xlsx - the 2022 population estimates for US States and regions, the population estimates are obtained from this link [State Population Totals and Components of Change: 2020-2022](https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-total.html)
 
-
-## Intermediate Data files:
-
-As part of the code, CSV files of the data pulled were created, these are present under the CSV_Files folder: 
-1) Desktop_Page_Views.csv: This file has the output of the data pull for the desktop views of the movie list
-   
-2) Mobile_App_Page_Views.csv: This file has the output of the data pull for the mobile app views of the movie list
-
-3) Mobile_Web_Page_Views.csv: This file has the output of the data pull for the mobile web views of the movie list
+TO BE NOTED: the input state file doesn't have data for the states of Nebraska and Connecticut. 
 
 ## Final Output files:
-The final output is in the folders: "". 
+The final output is in the folders: "Output Files". This file contains the article quality prediction and 2022 Estimated population for the cities by state and regional division.
+The fields in this file are as below:
 
-File: 
 Fields:
-state (character): state of the article.
-regional_division (character): regional division of the article.
-population (integer): 2022 population of the state.
-article_title (character): title of the article.
-revision_id (integer): last revision ID of the article obtained from MediaWii Action API.
-article_quality (character): predicted article quality obtained from the ORES API.
-
-
+state (string): The US state
+page_title (string) : the page title for the Wiki article of the city
+regional_division (string): The region and division for the city
+Population Est. 2022 (numeric): 2022 estimated population for the state.
+lastrevid (numeric) : The ID column used by Wiki to fetch articles details by
+prediction (string) : the predicted article quality as obtained from the ORES API
+probability (numeric) : the probability for the associated article quality as obtained from the ORES API
+prediction_text (string) : user-friendly description of article quality
 
 ## Code files
 Present in the folder "Notebooks"
@@ -87,7 +80,7 @@ Apart from the above, here are some responses to a set of questions on this data
    a) As mentioned above, I expected big cities and tech hubs to have a higher proportion of good quality articles as opposed to more interior cities. This was based on the assumption that more people are technologically inclined at such places and would take greater efforts to add details to the place they are a domicile of. However, that has not really been the case and the efforts of the committed few often outweigh the headaches associated with moderating and ascertaining the sources from a myriad of accounts
 
 2) What might your results suggest about (English) Wikipedia as a data source?
-  a) In spite of the biases and vagaries of the API calls and results, I believe that Wikipedia is a very valid source for initial analysis and as square one to start one's research. With the increasing trend of companies locking up their data from API access, Wiki might well be one of the last bastions of publicly available and near-verified data sources. Analysis is in the hands of the data scientist. One could run with "results" that enforce their bias or preconceived notions or use the data to report findings. In that sense, Wiki is still a great source to obtain data from and reach high level analysis goals.
+  a) In spite of the biases and vagaries of the API calls and results, I believe that Wikipedia is a very valid source for initial analysis and as square one to start one's research. With the increasing trend of companies locking up their data from API access, Wiki might well be one of the last bastions of publicly available and near-verified data sources. Analysis is in the hands of the data scientist. One could run with "results" that enforce their bias or preconceived notions or use the data to report findings. In that sense, Wiki is still a great source to obtain data from and reach high level analysis goals. Another point to be noted is the completeness of data, for instance, the state list in my input did not have details for the states of Nebraska and Connecticut, hence it is vital to be cognizant of the limitations of these results especially at a division or region level. 
 
 3) How might a researcher supplement or transform this dataset to potentially correct for the limitations/biases you observed?
   a) Be it Wikipedia or other sources, unless there is a universally accepted single source of truth, it would be detrimental to rely on one source. This can be accounted for by going through the articles that are used to create the content for this site. Similarly, using government data sources and renowned news publication would add not just dimensions but a more unbiased source to the research. If more time were devoted to data requisition (provenance) over training models, that is to say, if we trained ourselves to learn the data before running it through machine learning, not only will our results be rich, but we can avoid controversies and human errors. After all, stats without context is not much different from a grand lie with a kernel of truth to it.
