@@ -35,13 +35,21 @@ The fields in this file are as below:
 
 Fields:
 state (string): The US state
+
 page_title (string) : the page title for the Wiki article of the city
+
 regional_division (string): The region and division for the city
+
 Population Est. 2022 (numeric): 2022 estimated population for the state.
+
 lastrevid (numeric) : The ID column used by Wiki to fetch articles details by
+
 prediction (string) : the predicted article quality as obtained from the ORES API
+
 probability (numeric) : the probability for the associated article quality as obtained from the ORES API
+
 prediction_text (string) : user-friendly description of article quality
+
 
 ## Code files
 Present in the folder "Notebooks"
